@@ -1,11 +1,6 @@
-﻿using Discord.WebSocket;
-using Microsoft.Extensions.DependencyInjection;
+using Discord.WebSocket;
 using System;
 using System.Threading.Tasks;
-using Discord.Commands;
-using ZerbBot.Services;
-using System.Net.Http;
-using ZerbBot.Modules;
 
 namespace ZerbBot
 {
@@ -13,8 +8,6 @@ namespace ZerbBot
     {
         DiscordSocketClient _client;
         CommandHandler _handler;
-
-        private IServiceProvider _services;
 
 
         static void Main(string[] args)
@@ -33,7 +26,6 @@ namespace ZerbBot
 
             _client.Log +=  Log;
 
-            //_services = ConfigureServices();
 
             //login
             await _client.LoginAsync(Discord.TokenType.Bot, Config.bot.token);  // Tokens should be considered secret data, and never hard-coded.
@@ -52,18 +44,5 @@ namespace ZerbBot
             Console.WriteLine(message.Message);           
         }
 
-        /*private IServiceProvider ConfigureServices()
-        {
-            return new ServiceCollection()
-                .AddSingleton<DiscordSocketClient>()
-                .AddSingleton<CommandService>()
-                .AddSingleton<CommandHandler>()
-                .AddSingleton<HttpClient>()
-                .AddSingleton<CatModule>()     
-                .AddSingleton<AudioService>()
-                .AddSingleton<AudioModule>()
-                .BuildServiceProvider();
-
-        }*/
     }
 }
