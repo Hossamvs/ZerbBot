@@ -1,0 +1,9 @@
+!cat 		             
+!choose {choice1}|{choice2}  
+!curse 		             
+!curse user {@user} 		             
+!dog 		             
+!echo {message} 		             
+!forecast {city} {country} 		             
+!hello 		             
+!purge {number} 		             
