@@ -32,13 +32,6 @@ namespace ZerbBot.Modules
         }
         #endregion
 
-
-        [Command("kosomak")]
-        public async Task Kosomak()
-        {
-            await Context.Channel.SendMessageAsync("Kosomeen omak");
-
-        }
         #region Choose
         [Command("choose")]
         public async Task Choose([Remainder]string message)
