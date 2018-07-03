@@ -1,4 +1,4 @@
-﻿using Discord.Commands;
+using Discord.Commands;
 using Discord.WebSocket;
 using System;
 using System.Threading.Tasks;
@@ -11,7 +11,7 @@ namespace ZerbBot.Modules
         [Command]
         public async Task Diss()
         {
-            string[] dissList = new string[] { "Fuck you", "Faggot", "Drink piss and die " };
+            string[] dissList = new string[] { "insult1", "insult2"};
             Random random = new Random();
             string diss = dissList[random.Next(0, dissList.Length)];
             await ReplyAsync(diss);
@@ -22,7 +22,7 @@ namespace ZerbBot.Modules
 
             var dmChannel = await user.GetOrCreateDMChannelAsync();
 
-            string[] dissList = new string[] { "Fuck you", "Faggot", "Drink piss and die", "No one likes you","I hope you get aids" };
+            string[] dissList = new string[] { "insult1","insult2"};
             Random random = new Random();
             string diss = dissList[random.Next(0, dissList.Length)];
 
